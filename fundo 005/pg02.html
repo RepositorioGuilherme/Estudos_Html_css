@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alinhamento vertical</title>
+    <style>
+        #container{
+            position: relative;/*sempre colocar em uma box do tipo container*/
+            height: 610px;
+            background-color: darkblue;
+            padding: 5px;
+        }
+        #conteudo{
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: darkred;
+            left: 550px;
+            top: 100px;
+            padding: 5px;
+        }
+        #conteudotx{
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: aliceblue;
+            left: 10px;
+            top: 100px;
+            padding: 5px;
+        }
+        #aula{
+            width: 400px;
+            margin:auto; /*usado para centralizar na horizontal*/
+            margin-top: 400px;
+            height: 200px;
+            background-color: antiquewhite;
+            
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        p:hover{
+            text-decoration: underline;
+            color: darkblue;
+        }
+    </style>
+<body>
+    <nav>
+        <a href="index.html">voltar para o index</a>
+    </nav>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+        <article id="aula">
+
+        </article>
+        <article id="conteudotx">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptates officia quod harum hic iusto voluptatem voluptate provident dolores quos atque sequi cumque similique eveniet, repellendus ratione voluptas laboriosam eum!</p>
+        </article>
+    </section>
+    
+</body>
+</html>
