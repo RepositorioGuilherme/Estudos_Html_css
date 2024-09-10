@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <link rel="shortcut icon" href="../images-_1_.ico" type="image/x-icon">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="../forms 001/cadastro.php" method="post" autocomplete="off">
+        <p>
+            <label for="n1">Digite o primeiro número:</label>
+            <input type="number" name="n1" id="n1" min="-1000000" max="1000000" required oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+        </p>
+        <p>
+            <label for="n2">Digite o segundo número:</label>
+            <input type="number" name="n2" id="n2" min="-1000000" max="1000000" required oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+        </p>
+        <p>
+            <label for="soma">Soma dos dois número: </label>
+            <output id="soma">0</output>
+        </p>
+        <h2>Teste de range</h2 >
+        <p>
+            <label for="inum">Número:</lab>
+            <input type="range" name="num" id="inum" min="0" max="50" value="25" required oninput="irang.innerHTML= Number(inum.value)">
+            <output id="irang">25</output>
+        </p>
+        <h3>Teste de Idade</h3>
+        <p>
+            <label for="iano">Em qual ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="calcidade()">
+        </p>
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">0</output>
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+    <script>
+        function calcidade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = atual - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
